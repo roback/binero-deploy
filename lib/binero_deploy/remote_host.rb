@@ -134,7 +134,7 @@ module BineroDeploy
     # --------------- BACKUP ---------------
 
     def create_database_dump(dump_filename)
-      db_config = parse_db_backup_config_file(db_config_json)
+      db_config = parse_db_backup_config_file
 
       db_host     = db_config.fetch(:db_host)
       db_user     = db_config.fetch(:db_user)
