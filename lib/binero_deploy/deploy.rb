@@ -63,10 +63,10 @@ module BineroDeploy
       end
     end
 
-    def create_archive(archive_filepath: archive_filepath)
+    def create_archive(archive_filepath: filepath)
       @console.info('Archiving files to upload...')
       files = get_files_to_upload
-      `tar -cvf #{archive_filepath} #{Shellwords.join(files)}`
+      `tar -cvf #{filepath} #{Shellwords.join(files)}`
       @console.info('Archive created!')
     end
 
