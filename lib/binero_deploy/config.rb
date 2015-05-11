@@ -27,7 +27,7 @@ module BineroDeploy
     }
 
     def parse
-      abort_config_parse('The deploy config file (#{CONFIG_FILENAME}) does not exist!') unless file_exist?
+      abort_config_parse("The deploy config file (#{CONFIG_FILENAME}) does not exist!") unless file_exist?
 
       config = JSON.parse(File.read(CONFIG_FILENAME), symbolize_names: true)
       config = DEFAULTS.merge(config)
